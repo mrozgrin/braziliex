@@ -68,7 +68,7 @@
                 public function open_orders($market) {               
                         return $this->send_request(
                                 array(
-                                        'command' => 'openorder',
+                                        'command' => 'open_orders',
                                         'market' => strtolower($market)
                                 )
                         );
@@ -77,7 +77,7 @@
                 public function trade_history($market) {               
                         return $this->send_request(
                                 array(
-                                        'command' => 'tradehistory',
+                                        'command' => 'trade_history',
                                         'market' => strtolower($market)
                                 )
                         );
@@ -86,7 +86,7 @@
                 public function deposit_address($currency) {               
                         return $this->send_request(
                                 array(
-                                        'command' => 'depositaddress',
+                                        'command' => 'deposit_address',
                                         'currency' => strtolower($currency)
                                 )
                         );
@@ -117,7 +117,7 @@
                 public function cancel_order($market, $order) {               
                         return $this->send_request(
                                 array(
-                                        'command' => 'cancelorder',
+                                        'command' => 'cancel_order',
                                         'order_number' => $order,
                                         'market' => strtolower($market)
                                 )
